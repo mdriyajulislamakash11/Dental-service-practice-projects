@@ -6,6 +6,8 @@ import AllTreatments from "../pages/AllTreatments";
 import MyProfile from "../pages/MyProfile";
 import MyAppoinments from "../pages/MyAppoinments";
 import DetailsCard from "../pages/DetailsCard";
+import Login from "../pages/Login";
+import Register from "../pages/Register";
 
 const router = createBrowserRouter([
   {
@@ -36,7 +38,7 @@ const router = createBrowserRouter([
         element: <MyProfile />,
       },
       {
-        path: "/my0Appointments",
+        path: "/myAppointments",
         element: <MyAppoinments />,
       },
       {
@@ -48,6 +50,14 @@ const router = createBrowserRouter([
           const singleData = data.find((service) => service.id == params.id);
           return singleData;
         },
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/register",
+        element: <Register />
       },
     ],
   },

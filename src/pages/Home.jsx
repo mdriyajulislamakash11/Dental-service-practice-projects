@@ -46,7 +46,7 @@ const Home = () => {
       {/* All Treatment cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {feedbackData.map((feedback) => (
-          <FeedBackCard key={feedback.id} feedback={feedback} />
+          <FeedBackCard key={feedback.reviewId} feedback={feedback} />
         ))}
       </div>
     </div>
