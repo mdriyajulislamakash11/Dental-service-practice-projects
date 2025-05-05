@@ -1,11 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../auth/AuthProvider";
+
 
 const Login = () => {
+    const {googleLogin} = useContext(AuthContext)
+    const navigate = useNavigate()
+
+
+  const handleLoginUser = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(email, password);
+
+
+
+  };
+
+  const handleGoogleLogin = () => {
+    googleLogin()
+    .then((result) => {
+        console.log(result.user);
+        navigate("/")
+    })
+  }
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-base-200 px-4">
       <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
-        <form className="card-body">
+        <form className="card-body" onSubmit={handleLoginUser}>
           <h2 className="text-2xl font-bold text-center">Login</h2>
           <div className="form-control">
             <label className="label">
@@ -39,11 +64,19 @@ const Login = () => {
           </div>
           <p className="text-sm mt-3 text-center">
             Don’t have an account?{" "}
-            <Link to="/register" className="text-blue-500 link-hover font-medium">
+            <Link
+              to="/register"
+              className="text-blue-500 link-hover font-medium"
+            >
               Register here
             </Link>
           </p>
         </form>
+      </div>
+
+      {/* social Login */}
+      <div>
+        <button onClick={handleGoogleLogin}>Google</button>
       </div>
     </div>
   );

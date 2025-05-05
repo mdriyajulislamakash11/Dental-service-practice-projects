@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
 
 const Register = () => {
-    cons [error, setError] = useState("")
+    const [error, setError] = useState("")
     const navigate = useNavigate()
     const {registerUser} = useContext(AuthContext)
 
@@ -17,17 +17,21 @@ const Register = () => {
         console.log(name, photo, email, password)
 
         const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?#&])[A-Za-z\d@$!%*?#&]{6,}$/;
-        if(!passwordRegex.test(password))
+        if(!passwordRegex.test(password)){
+            return setError("please Valid passWord")
+        }
 
 
         // register user
         registerUser(email, password)
         .then((result) =>{
             console.log("register User: ", result.user)
+            setError("")
             navigate("/")
         })
         .catch((error) => {
             console.log(error.message)
+            setError(error.message)
         })
 
     }
@@ -103,6 +107,10 @@ const Register = () => {
           <div className="form-control mt-4">
             <button className="btn btn-primary">Register</button>
           </div>
+
+          {
+            error && <p>{error}</p>
+          }
 
           <p className="text-sm mt-3 text-center">
             Already have an account?{" "}
