@@ -2,20 +2,34 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 const Navber = () => {
-
-    const links = <>
-    <li><NavLink to="/">Home</NavLink></li>
-    <li><NavLink to="/allTreatments">All Treatments</NavLink></li>
-    <li><NavLink to="/myProfie">My-Profile</NavLink></li>
-    <li><NavLink to="/my0Appointments">My-Appointments</NavLink></li>
-
+  const links = (
+    <>
+      <li>
+        <NavLink to="/" activeClassName="text-blue-500">
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/allTreatments" activeClassName="text-blue-500">
+          All Treatments
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/myProfile" activeClassName="text-blue-500">
+          My Profile
+        </NavLink>
+      </li>
+      <li>
+        <NavLink to="/myAppointments" activeClassName="text-blue-500">
+          My Appointments
+        </NavLink>
+      </li>
     </>
-
-
+  );
 
   return (
     <div className="mx-10">
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 z-50 fixed top-0 left-0 w-full shadow-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -38,18 +52,16 @@ const Navber = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-             {links}
+              {links}
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">Beautiful Smail</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-          {links}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Login</a>
+          <button className="btn">Login</button>
         </div>
       </div>
     </div>
