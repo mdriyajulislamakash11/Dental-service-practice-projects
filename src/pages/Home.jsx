@@ -18,7 +18,7 @@ const Home = () => {
       </div>
 
       {/* All Treatment cards */}
-
+        
 
 
     </div>
