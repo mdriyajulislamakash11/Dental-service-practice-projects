@@ -34,5 +34,17 @@
       "name": "Austin Jenkins",
       "userImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kid_President_in_White_House_2013_Easter_Egg_Roll_Promo.jpg/640px-Kid_President_in_White_House_2013_Easter_Egg_Roll_Promo.jpg",
       "review": "I broke my two teeth playing football.My parents were so mad at me about that.They took me to Dr. Jakariya and he fixed my teeth and I am better now."
+    },
+    {
+      "reviewId": 7,
+      "name": "Alamin Hossain",
+      "userImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kid_President_in_White_House_2013_Easter_Egg_Roll_Promo.jpg/640px-Kid_President_in_White_House_2013_Easter_Egg_Roll_Promo.jpg",
+      "review": "I broke my two teeth playing football.My parents were so mad at me about that.They took me to Dr. Jakariya and he fixed my teeth and I am better now."
+    },
+    {
+      "reviewId": 8,
+      "name": "Akash Ahmed",
+      "userImg": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Kid_President_in_White_House_2013_Easter_Egg_Roll_Promo.jpg/640px-Kid_President_in_White_House_2013_Easter_Egg_Roll_Promo.jpg",
+      "review": "I broke my two teeth playing football.My parents were so mad at me about that.They took me to Dr. Jakariya and he fixed my teeth and I am better now."
     }
   ]
