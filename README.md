@@ -1,12 +1,56 @@
-# React + Vite
+# 🦷 Dental Service
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Dental Service**, a modern, feature-rich dental clinic website built using **React** and styled with **Tailwind CSS** & **DaisyUI**. This project leverages modern frontend technologies to deliver a smooth, responsive, and professional user experience.
 
-Currently, two official plugins are available:
+🔗 **Live Site:** [Dental Service Website](https://silly-biscuit-a42fe9.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+*(Add a screenshot here if available)*
+
+---
+
+## 🚀 Features
+
+- ⚛️ Built with React
+- 🎨 Styled using Tailwind CSS and DaisyUI
+- 📱 Fully responsive layout
+- 🧾 Service listing, About Us, Contact section
+- 🔗 React Router for smooth page navigation
+- 🔄 Reusable Components
+- 💡 Clean and semantic code structure
+- 🌐 SEO-friendly basic structure
+
+---
+
+## 📦 Used NPM Packages
+
+Below are the main libraries and tools used:
+
+- `react` – Core library
+- `react-dom` – DOM bindings for React
+- `react-router-dom` – Client-side routing
+- `daisyui` – Beautiful pre-built Tailwind CSS components
+- `tailwindcss` – Utility-first CSS framework
+- `autoprefixer` – Adds vendor prefixes for broader compatibility
+- `postcss` – For Tailwind & CSS processing
+- *(Add more here if used: like `axios`, `react-icons`, `framer-motion`, etc.)*
+
+---
+
+## 🛠️ Technologies Used
+
+- HTML5  
+- CSS3  
+- React JS  
+- JavaScript (ES6+)  
+- Tailwind CSS  
+- DaisyUI  
+- React Router
+
+---
+
+## 📁 Project Structure (Sample)
+
