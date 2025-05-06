@@ -2,11 +2,9 @@ import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
 
-
 const Login = () => {
-    const {googleLogin} = useContext(AuthContext)
-    const navigate = useNavigate()
-
+  const { googleLogin, loginUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const handleLoginUser = (e) => {
     e.preventDefault();
@@ -15,17 +13,25 @@ const Login = () => {
     const password = form.password.value;
     console.log(email, password);
 
+    //Login User
+    loginUser(email, password)
+    .then((result) =>{
+        console.log(result.user)
+        
+    })
+    .catch((error) => {
+        console.log(error.message)
+    })
 
 
   };
 
   const handleGoogleLogin = () => {
-    googleLogin()
-    .then((result) => {
-        console.log(result.user);
-        navigate("/")
-    })
-  }
+    googleLogin().then((result) => {
+      console.log(result.user);
+      navigate("/");
+    });
+  };
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-base-200 px-4">
@@ -38,6 +44,7 @@ const Login = () => {
             </label>
             <input
               type="email"
+              name="email"
               placeholder="Enter your email"
               className="input input-bordered"
               required
@@ -49,6 +56,7 @@ const Login = () => {
             </label>
             <input
               type="password"
+              name="password"
               placeholder="Enter your password"
               className="input input-bordered"
               required
